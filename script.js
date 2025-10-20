@@ -38,7 +38,7 @@ const translations = {
         nav_contact: "Contacto",
         home_greeting: "Hola, mi nombre es",
         home_name: "Karely Yamileth Aragón Palomares",
-        home_profile: "Desarroladora Front-End",
+        home_profile: "Desarrolladora Front-End",
         about_title: "Sobre Mí",
         about_text: "Estudiante de Ingeniería en Tecnologías de la Información con conocimientos en Java, HTML y SQL, así como en bases de datos y redes. Experiencia en proyectos académicos y personales utilizando diversas herramientas de desarrollo. Motivada por seguir aprendiendo y aplicar mis habilidades en un entorno profesional.",
         download_cv: "Descargar CV",
@@ -174,4 +174,5 @@ document.querySelectorAll('.navbar a').forEach(link => {
             icon.classList.add('fa-bars');
         }
     });
+
 });
