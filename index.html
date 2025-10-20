@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web | Karely Aragón</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+ <header class="header">
+        <a href="#" class="logo" data-key="logo">KARELY ARAGÓN</a> 
+        <nav class="navbar">
+            <a href="#home" data-key="nav_home">Inicio</a>
+            <a href="#about" data-key="nav_about">Sobre mí</a>
+            <a href="#projects" data-key="nav_projects">Proyectos</a>
+            <a href="#skills" data-key="nav_skills">Habilidades</a>
+            <a href="#contact" data-key="nav_contact">Contacto</a>
+        </nav>
+        <div class="header-right">
+            <div class="language-switcher">
+                <button onclick="changeLanguage('es')">ES</button>
+                <button onclick="changeLanguage('en')">EN</button>
+                <button onclick="changeLanguage('fr')">FR</button> 
+            </div>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-sun"></i>
+            </button>
+            
+            <button id="menu-toggle" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="home">
+            <div class="home-content">
+                <div class="home-text">
+                    <h1 data-key="home_greeting">Hola, mi nombre es</h1>
+                    <h2 data-key="home_name">Karely Yamileth Aragón Palomares</h2>
+                    <h3 data-key="home_profile">Desarroladora Front-End</h3> 
+      
+                </div>
+                
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagenes/fotokarelycelular.png">
+                    <source media="(max-width: 1200px)" srcset="imagenes/fotokarelytablet.png">
+                    <img src="imagenes/fotokarely.png" alt="Fotografía Profesional Karely Aragón" class="profile-photo">
+                </picture>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 data-key="about_title">Sobre Mí</h2>
+            <p data-key="about_text">
+                Estudiante de Ingeniería en Tecnologías de la Información con conocimientos en Java, HTML y SQL, así como en bases de datos y redes. [cite: 14]
+                Experiencia en proyectos académicos y personales utilizando diversas herramientas de desarrollo. 
+                Motivada por seguir aprendiendo y aplicar mis habilidades en un entorno profesional. 
+            </p>
+            <a href="imagenes/CV.pdf" download class="btn" data-key="download_cv">Descargar CV</a>
+        </section>
+
+        <section id="projects" class="projects">
+             <h2 data-key="projects_title">Proyectos Principales</h2>
+             <div class="project-container">
+                 <div class="project-card">
+                     <h3 data-key="project1_title">Sistema gestión de créditos de una boutique</h3> 
+                     <p data-key="project1_desc">Desarrollé un sistema de control de créditos para una tienda de ropa utilizando NetBeans, vinculado a una base de datos para registrar clientes, prendas y pagos a plazos, facilitando así la gestión interna de la boutique.</p> 
+                     <p><strong data-key="tech_title">Tecnologías:</strong> Java (NetBeans), SQL</p>
+                     <div class="project-links">
+                         <a href="imagenes/Manual .pdf" target="_blank" data-key="project1_link">Ver Manual</a>
+                         
+                     </div>
+                 </div>
+                 <div class="project-card">
+                     <h3 data-key="project2_title">OptiRuta - Diseño de UI/UX</h3> 
+                     <p data-key="project2_desc">Participé en el diseño de interfaces con Figma para una aplicación móvil destinada a optimizar las rutas de transporte en Mazatlán, priorizando la usabilidad, accesibilidad y experiencia de usuario.</p> 
+                     <p><strong data-key="tech_title">Tecnologías:</strong> Figma</p> 
+                     <div class="project-links">
+                         <a href="https://www.figma.com/proto/kKj13GrPX3v2gLKndEcdAR/OptiRuta?node-id=1769-14374&p=f&m=draw&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" target="_blank" data-key="project2_link">Ver Demo</a>
+                        
+                     </div>
+                 </div>
+                
+             </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 data-key="skills_title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-key="skills_cat1">Lenguajes</h3>
+                    <ul>
+                        <li>Java</li> 
+                        <li>HTML</li> 
+                        <li>SQL</li> 
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 data-key="skills_cat2">Bases de Datos y Redes</h3>
+                    <ul>
+                        <li>Diseño de bases de datos</li> 
+                        <li>Manejo de redes (configuración de routers, y protocolos)</li> 
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 data-key="skills_cat3">Habilidades Blandas</h3>
+                    <ul>
+                        <li>Adaptabilidad a los cambios</li> 
+                        <li>Trabajo en equipo</li> 
+                        <li>Organización y responsabilidad</li> 
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="certifications" class="certifications">
+            <h2 data-key="certs_title">certifications</h2>
+            <ul>
+                <li><span data-key="certs_item1">IT Essentials: PC Hardware and Software</span> <a href="imagenes/CertificadoITEssentials.pdf" target="_blank" data-key="cert_link">Ver certificado</a></li>
+                <li><span data-key="certs_item2">CCNAv7: Introduction to Networks</span> <a href="imagenes/CertificadoCCNA-IntroductiontoNetworks.pdf" target="_blank" data-key="cert_link">Ver certificado</a></li>
+                <li><span data-key="certs_item3">Programador (orientado a objetos)</span> <a href="imagenes/CertificadoPOO.pdf" target="_blank" data-key="cert_link">Ver certificado</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 data-key="contact_title">Contacto</h2>
+            <p data-key="contact_text">Si te interesa mi perfil, no dudes en contactarme.</p>
+            <p><strong>Email:</strong> <a href="mailto:2023020469@upsin.edu.mx">2023020469@upsin.edu.mx</a></p> 
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
