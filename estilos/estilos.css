@@ -10,7 +10,7 @@
     --section-bg-color: #283A48;
 }
 
-/* Estilos generales y de barra de navegación  */
+/* Estilos Generales */
 * { margin: 0; padding: 0;
     box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
 body { background-color: var(--bg-color); color: var(--text-color); transition: background-color 0.3s, color 0.3s;
@@ -37,8 +37,6 @@ h2 { font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 2rem; text-
     display: none; background: none; border: none;
     color: #FFFFFF; font-size: 1.5rem; cursor: pointer; margin-left: 15px;
 }
-
-
 .home { 
     display: flex; 
     align-items: center;
@@ -74,21 +72,12 @@ h2 { font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 2rem; text-
     line-height: 1.1; text-align: left; margin: 0;
 }
 .home-text h3 { font-size: 1.8rem; font-weight: 400; margin-bottom: 2rem; }
-
-/* =========== FOTO DE PERFIL  =========== */
 .profile-photo {
-    width: 215px;
-    height: 340px;
-    border-radius: 30px;
+    width: 215px; height: 340px; border-radius: 30px;
     box-shadow: 0px 4px 24px rgba(0,0,0,0.18), 0px 0px 0px 7px var(--primary-accent);
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    margin: 0 auto;
-    border: none;
-    transition: width 0.3s ease, height 0.3s ease;
+    object-fit: cover; object-position: center; display: block;
+    margin: 0 auto; border: none; transition: width 0.3s ease, height 0.3s ease;
 }
-
 
 .social-links { display: flex;
     gap: 1.5rem; margin-top: 1rem; }
@@ -127,8 +116,7 @@ main a:hover, .project-links a:hover, .certifications a:hover {
     margin: 0 auto;
 }
 [data-theme="dark"] .about h2,
-[data-theme="dark"] .skills h2,
-[data-theme="dark"] .contact h2 {
+[data-theme="dark"] .skills h2 {
     color: var(--text-color); 
 }
 [data-theme="dark"] main a, 
@@ -143,26 +131,23 @@ main a:hover, .project-links a:hover, .certifications a:hover {
     color: #FFFFFF; 
     text-decoration: underline;
 }
-/* ESTILOS DEL FOOTER */
+/* FOOTER */
 .footer {
     padding: 4rem 8% 2rem; 
     background-color: #283A48;
     color: #FFFFFF;
 }
-
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
 }
-
 .footer-column {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-
 .footer-column h3 {
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
@@ -170,26 +155,20 @@ main a:hover, .project-links a:hover, .certifications a:hover {
     border-bottom: 2px solid #A9D6E5; 
     padding-bottom: 0.5rem;
 }
-
 .footer-column p {
     font-size: 0.9rem;
     color: #DDDDDD;
     line-height: 1.5;
 }
-
-
 .footer-column a {
     color: #FFFFFF; 
     text-decoration: none;
     transition: 0.3s;
 }
-
-
 .footer-column a:hover {
     color: #A9D6E5; 
     text-decoration: underline;
 }
-
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -198,13 +177,11 @@ main a:hover, .project-links a:hover, .certifications a:hover {
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
 }
-
 .footer-text {
     font-size: 0.9rem;
     flex-grow: 1; 
     text-align: center; 
 }
-
 .footer-iconTop a {
     display: inline-flex;
     justify-content: center;
@@ -217,7 +194,6 @@ main a:hover, .project-links a:hover, .certifications a:hover {
     text-decoration: none;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
-
 .footer-iconTop a:hover {
     background-color: #A9D6E5;
     color: #1A1A1A;
@@ -225,53 +201,39 @@ main a:hover, .project-links a:hover, .certifications a:hover {
 }
 
 
-/* --- DISEÑO RESPONSIVO  --- */
+/* --- CAMBIOS PARA DISEÑO RESPONSIVO --- */
 @media (max-width: 992px) {
-    .home-content { flex-direction: column-reverse; text-align: center;
-    }
+   
+    .home-content { flex-direction: column-reverse; text-align: center; gap: 1.5rem; /* Menos gap */ }
     .home-text { text-align: center; }
-    .home-text h2 { text-align: center; font-size: 3.5rem;
-    }
+    .home-text h2 { text-align: center; font-size: 3.5rem; }
     .social-links { justify-content: center; }
-
-    
-    .profile-photo {
-        width: 180px;  
-        height: 284px;
-    }
+    .profile-photo { width: 180px; height: 284px; }
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; 
-    }
+ 
+    .menu-toggle { display: block; }
     .navbar {
-        position: absolute;
-        top: 100%; 
-        left: 0;
-        width: 100%;
-        background-color: #283A48; 
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        padding: 1rem 0;
-        transform: translateY(-120%); 
-        transition: transform 0.3s ease-in-out;
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background-color: #283A48; display: flex; flex-direction: column; 
+        align-items: center; padding: 1rem 0;
+        transform: translateY(-120%); transition: transform 0.3s ease-in-out;
         border-bottom: 1px solid var(--border-color);
     }
-    .navbar.active {
-        transform: translateY(0);
-    }
-    .navbar a {
-        margin: 0.5rem 0; 
-        padding: 0.5rem;
-    }
+    .navbar.active { transform: translateY(0); }
+    .navbar a { margin: 0.5rem 0; padding: 0.5rem; }
     
-    .home-content h2 { font-size: 2.8rem; }
+    section { padding: 80px 5%;  }
+    
+    .home-content { gap: 1rem;  }
+    .home-text h2 { font-size: 2.5rem;  }
+    .home-text h3 { font-size: 1.5rem; }
+    .profile-photo { width: 150px; height: 236px; }
 
-    
-    .profile-photo {
-        width: 150px;  
-        height: 236px;
+   
+    .home::before {
+        font-size: 35vw;
+        opacity: 0.02;   
     }
 }
