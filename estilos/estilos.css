@@ -1,4 +1,4 @@
-/* --- PALETA DE COLORES (sin cambios) --- */
+/* --- PALETA DE COLORES  --- */
 :root {
     --bg-color: #FFFFFF; --text-color: #1A1A1A; --card-bg-color: #FFFFFF;
     --primary-accent: #3E6489; --secondary-accent: #283A48; --border-color: #DDDDDD;
@@ -10,11 +10,10 @@
     --section-bg-color: #283A48;
 }
 
-/* (Estilos Generales, Header, Home Desktop, etc. - sin cambios) */
+/* Estilos Generales */
 * { margin: 0; padding: 0;
     box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
 body { background-color: var(--bg-color); color: var(--text-color); transition: background-color 0.3s, color 0.3s;
-    overflow-x: hidden; /* Previene scroll horizontal accidental */
 }
 section { padding: 100px 8%; position: relative; }
 h2 { font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 2rem; text-align: center;
@@ -43,8 +42,6 @@ h2 { font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 2rem; text-
     align-items: center;
     min-height: 100vh;
     overflow: hidden; 
-    padding-top: 120px; /* Asegura espacio para el header fijo */
-    padding-bottom: 60px;
 }
 .home::before {
     content: 'KARELY ARAGON';
@@ -53,7 +50,6 @@ h2 { font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 2rem; text-
     transform: translate(-50%, -50%);
     font-size: 23vw; font-weight: 900;
     color: var(--text-color); opacity: 0.03; z-index: -1;
-    white-space: nowrap; /* Evita que el texto se rompa */
 }
 .home-content { 
     display: flex; 
@@ -74,7 +70,6 @@ h2 { font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 2rem; text-
     font-size: 4.1rem; font-weight: 900;
     color: var(--primary-accent); 
     line-height: 1.1; text-align: left; margin: 0;
-    word-break: break-word; /* Permite que el nombre se rompa si es necesario */
 }
 .home-text h3 { font-size: 1.8rem; font-weight: 400; margin-bottom: 2rem; }
 .profile-photo {
@@ -83,7 +78,7 @@ h2 { font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 2rem; text-
     object-fit: cover; object-position: center; display: block;
     margin: 0 auto; border: none; transition: width 0.3s ease, height 0.3s ease;
 }
-/* (Resto de estilos hasta llegar al @media) */
+
 .social-links { display: flex;
     gap: 1.5rem; margin-top: 1rem; }
 .social-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: color 0.3s;
@@ -208,16 +203,16 @@ main a:hover, .project-links a:hover, .certifications a:hover {
 
 /* --- CAMBIOS PARA DISEÑO RESPONSIVO --- */
 @media (max-width: 992px) {
-    /* (Tablet - sin cambios adicionales aquí) */
-    .home-content { flex-direction: column-reverse; text-align: center; gap: 1.5rem; }
-    .home-text { text-align: center; max-width: 100%; /* Permite que ocupe todo el ancho */ }
+   
+    .home-content { flex-direction: column-reverse; text-align: center; gap: 1.5rem; /* Menos gap */ }
+    .home-text { text-align: center; }
     .home-text h2 { text-align: center; font-size: 3.5rem; }
     .social-links { justify-content: center; }
     .profile-photo { width: 180px; height: 284px; }
 }
 
 @media (max-width: 768px) {
-    /* --- AJUSTES MÁS AGRESIVOS PARA CELULAR AQUÍ --- */
+ 
     .menu-toggle { display: block; }
     .navbar {
         position: absolute; top: 100%; left: 0; width: 100%;
@@ -229,36 +224,39 @@ main a:hover, .project-links a:hover, .certifications a:hover {
     .navbar.active { transform: translateY(0); }
     .navbar a { margin: 0.5rem 0; padding: 0.5rem; }
     
-    section { padding: 60px 5%; /* Reducimos padding vertical también */ }
-    .home { padding-top: 100px; padding-bottom: 40px; } /* Ajustamos padding para la sección home */
+    section { padding: 80px 5%;  }
     
-    .home-content { gap: 1rem; }
-    
-    /* Quitamos max-width y ajustamos texto */
-    .home-text { 
-        max-width: none; /* Quitamos restricción */
-        width: 100%;     /* Asegura que use todo el ancho */
-    } 
-    .home-text h1 { font-size: 1.5rem; } /* Más pequeño */
-    .home-text h2 { 
-        font-size: 8vw; /* Tamaño basado en ancho de pantalla */
-        line-height: 1.2; 
-    }
-    .home-text h3 { 
-        font-size: 1.3rem; /* Más pequeño */
-        margin-bottom: 1.5rem; 
-    }
-    
-    .profile-photo { 
-        width: 130px; /* Foto aún más pequeña */
-        height: 205px; 
-        margin-bottom: 1rem; /* Espacio debajo de la foto */
-    }
+    .home-content { gap: 1rem;  }
+    .home-text h2 { font-size: 2.5rem;  }
+    .home-text h3 { font-size: 1.5rem; }
+    .profile-photo { width: 150px; height: 236px; }
 
-    /* Reducimos MUCHO MÁS el tamaño del texto de fondo */
+   
     .home::before {
-        font-size: 25vw; /* Aún más pequeño */
-        opacity: 0.015;   /* Aún más transparente */
+        font-size: 35vw;
+        opacity: 0.02;   
     }
 }
+
+/* Ajustes adicionales para evitar que el header se corte en móviles */
+@media (max-width: 600px) {
+    .header {
+        padding: calc(8px + env(safe-area-inset-top)) 5%;
+        align-items: center;
+        gap: 8px;
+    }
+    .logo { font-size: 1.05rem; }
+    .language-switcher button { padding: 4px 8px; font-size: 0.85rem; }
+    .theme-btn { font-size: 1.2rem; margin-left: 8px; }
+    /* Asegurar que el contenido no quede oculto bajo el header fijo */
+    main { padding-top: calc(72px + env(safe-area-inset-top)); }
+    section { padding-top: calc(84px + env(safe-area-inset-top)); }
+}
+
+@media (max-width: 420px) {
+    .header { padding: calc(6px + env(safe-area-inset-top)) 4%; }
+    .logo { font-size: 1rem; }
+    .language-switcher button { padding: 3px 6px; font-size: 0.8rem; }
+}
+
 
