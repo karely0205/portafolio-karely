@@ -143,6 +143,86 @@ main a:hover, .project-links a:hover, .certifications a:hover {
     color: #FFFFFF; 
     text-decoration: underline;
 }
+/* ESTILOS DEL FOOTER */
+.footer {
+    padding: 4rem 8% 2rem; 
+    background-color: #283A48;
+    color: #FFFFFF;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #FFFFFF;
+    border-bottom: 2px solid #A9D6E5; 
+    padding-bottom: 0.5rem;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    color: #DDDDDD;
+    line-height: 1.5;
+}
+
+
+.footer-column a {
+    color: #FFFFFF; 
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+.footer-column a:hover {
+    color: #A9D6E5; 
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: var(--primary-accent);
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.footer-iconTop a:hover {
+    background-color: #A9D6E5;
+    color: #1A1A1A;
+    box-shadow: 0 0 10px #A9D6E5;
+}
 
 
 /* --- DISEÑO RESPONSIVO  --- */
